@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rat Race Idle - Underground Racing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐀 Rat Race Idle</h1>
+            <p>Train your rat to become the ultimate underground racing champion</p>
+        </header>
+
+        <div class="game-area">
+            <div class="stats-panel">
+                <h2>Rat Stats</h2>
+                <div class="stat">
+                    <span>Name:</span>
+                    <span id="rat-name">Squeaky</span>
+                </div>
+                <div class="stat">
+                    <span>Age:</span>
+                    <span id="age">0</span> weeks old
+                </div>
+                <div class="stat">
+                    <span>Speed:</span>
+                    <span id="speed">1</span> mph
+                </div>
+                <div class="stat">
+                    <span>Stamina:</span>
+                    <span id="stamina">10</span>
+                </div>
+                <div class="stat">
+                    <span>Combat:</span>
+                    <span id="combat">1</span>
+                </div>
+                <div class="stat">
+                    <span>Survival:</span>
+                    <span id="survival">1</span>
+                </div>
+                <div class="stat">
+                    <span>Cheese:</span>
+                    <span id="cheese">0</span> 🧀
+                </div>
+                <div class="stat">
+                    <span>Race Wins:</span>
+                    <span id="race-wins">0</span>
+                </div>
+            </div>
+
+            <div class="actions-panel">
+                <h2>Training</h2>
+                <div id="available-actions">
+                    <button id="train-speed-btn" onclick="trainSpeed()">
+                        🏃 Train Speed (+1 Speed)
+                    </button>
+                    <button id="train-stamina-btn" onclick="trainStamina()">
+                        💪 Build Stamina (+2 Stamina)
+                    </button>
+                    <button id="scavenge-btn" onclick="scavenge()">
+                        🔍 Scavenge for Food
+                    </button>
+                    <button id="race-btn" onclick="enterRace()" disabled>
+                        🏁 Enter Race (Need 5 Speed)
+                    </button>
+                </div>
+            </div>
+
+            <div class="upgrades-panel">
+                <h2>Upgrades</h2>
+                <div id="available-upgrades">
+                    <button id="wheel-btn" onclick="buyWheel()" disabled>
+                        🎡 Exercise Wheel - 50 🧀 (2x Speed Training)
+                    </button>
+                    <button id="protein-btn" onclick="buyProtein()" disabled>
+                        🥜 Protein Pellets - 100 🧀 (2x Stamina Training)
+                    </button>
+                    <button id="nest-btn" onclick="buyNest()" disabled>
+                        🏠 Better Nest - 200 🧀 (Passive Stamina Regen)
+                    </button>
+                </div>
+            </div>
+
+            <div class="events-panel">
+                <h2>Recent Events</h2>
+                <div id="event-log">
+                    <div class="event">Welcome to the underground! Start training your rat.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="random-events">
+            <div id="current-event" style="display: none;">
+                <h3>Special Event!</h3>
+                <p id="event-description"></p>
+                <div id="event-choices"></div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button onclick="saveGame()">Save Game</button>
+            <button onclick="loadGame()">Load Game</button>
+            <button onclick="resetGame()">Reset Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

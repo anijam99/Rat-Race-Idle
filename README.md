@@ -1,2 +1,2 @@
 # Rat-Race-Idle
-An idle game about going through the rat race of Singapore.
+An idle game about the literal rat race. Literally rats racing.
