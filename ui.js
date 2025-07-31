@@ -14,7 +14,6 @@ export function addEvent(text) {
 }
 
 export function updateDisplay() {
-    document.getElementById('time-display').textContent = `${time.totalSeconds}s`;
     document.getElementById('day-night-display').textContent = time.isDay ? 'Day' : 'Night';
     
     document.getElementById('rat-name').textContent = gameState.ratName;
