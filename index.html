@@ -11,6 +11,12 @@
         <header>
             <h1>🐀 Rat Race Idle</h1>
             <p>Train your rat to become the ultimate underground racing champion</p>
+            <!-- Added for the new time cycle feature -->
+            <div id="time-container">
+                <span>Day: <span id="age">0</span></span> | 
+                <span>Time: <span id="time-display">0</span>s</span> | 
+                <span><span id="day-night-display">Day</span></span>
+            </div>
         </header>
 
         <div class="game-area">
@@ -20,10 +26,7 @@
                     <span>Name:</span>
                     <span id="rat-name">Squeaky</span>
                 </div>
-                <div class="stat">
-                    <span>Age:</span>
-                    <span id="age">0</span> weeks old
-                </div>
+                <!-- Note: The "Age" stat is now handled by the time container in the header -->
                 <div class="stat">
                     <span>Speed:</span>
                     <span id="speed">1</span> mph
@@ -53,16 +56,17 @@
             <div class="actions-panel">
                 <h2>Training</h2>
                 <div id="available-actions">
-                    <button id="train-speed-btn" onclick="trainSpeed()">
+                    <!-- Removed onclick attributes -->
+                    <button id="train-speed-btn">
                         🏃 Train Speed (+1 Speed)
                     </button>
-                    <button id="train-stamina-btn" onclick="trainStamina()">
+                    <button id="train-stamina-btn">
                         💪 Build Stamina (+2 Stamina)
                     </button>
-                    <button id="scavenge-btn" onclick="scavenge()">
+                    <button id="scavenge-btn">
                         🔍 Scavenge for Food
                     </button>
-                    <button id="race-btn" onclick="enterRace()" disabled>
+                    <button id="race-btn" disabled>
                         🏁 Enter Race (Need 5 Speed)
                     </button>
                 </div>
@@ -71,13 +75,14 @@
             <div class="upgrades-panel">
                 <h2>Upgrades</h2>
                 <div id="available-upgrades">
-                    <button id="wheel-btn" onclick="buyWheel()" disabled>
+                     <!-- Removed onclick attributes -->
+                    <button id="wheel-btn">
                         🎡 Exercise Wheel - 50 🧀 (2x Speed Training)
                     </button>
-                    <button id="protein-btn" onclick="buyProtein()" disabled>
+                    <button id="protein-btn">
                         🥜 Protein Pellets - 100 🧀 (2x Stamina Training)
                     </button>
-                    <button id="nest-btn" onclick="buyNest()" disabled>
+                    <button id="nest-btn">
                         🏠 Better Nest - 200 🧀 (Passive Stamina Regen)
                     </button>
                 </div>
@@ -93,19 +98,21 @@
 
         <div class="random-events">
             <div id="current-event" style="display: none;">
-                <h3>Special Event!</h3>
+                <h3 id="event-name">Special Event!</h3>
                 <p id="event-description"></p>
                 <div id="event-choices"></div>
             </div>
         </div>
 
         <div class="game-controls">
-            <button onclick="saveGame()">Save Game</button>
-            <button onclick="loadGame()">Load Game</button>
-            <button onclick="resetGame()">Reset Game</button>
+            <!-- Removed onclick and added IDs -->
+            <button id="save-btn">Save Game</button>
+            <button id="load-btn">Load Game</button>
+            <button id="reset-btn">Reset Game</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- The script tag MUST have type="module" to work with the new file structure -->
+    <script type="module" src="main.js"></script>
 </body>
 </html>
